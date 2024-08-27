@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nice Jewellers & Nice Beauty Parlour</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            scroll-behavior: smooth;
+        }
+
+        header {
+            background: linear-gradient(to right, #ff5f6d, #ffc371);
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            font-weight: 500;
+            transition: background-color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            background-color: rgba(255, 255, 255, 0.3);
+            border-radius: 5px;
+        }
+
+        .hero {
+           <img src="C:\Users\purut\OneDrive\Pictures\WhatsApp Image 2024-08-08 at 10.42.16_4bf35fbb.jpg" alt="Jewelry 1">
+            height: 80vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+            position: relative;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .hero h1 {
+            z-index: 1;
+            font-size: 4em;
+            margin: 0;
+        }
+
+        .container {
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            position: relative;
+            display: inline-block;
+        }
+
+        h2::after {
+            content: '';
+            width: 50px;
+            height: 5px;
+            background-color: #ff5f6d;
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .about {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+
+        .about img {
+            width: 45%;
+            max-width: 500px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .about .text {
+            width: 50%;
+            text-align: left;
+            line-height: 1.6;
+            margin-left: 20px;
+        }
+
+        .services {
+            display: flex;
+            justify-content: space-around;
+            margin: 60px 0;
+            flex-wrap: wrap;
+        }
+
+        .services .service-box {
+            width: 30%;
+            min-width: 250px;
+            background-color: white;
+            padding: 30px;
+            margin: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        .services .service-box:hover {
+            transform: translateY(-10px);
+        }
+
+        .service-box h3 {
+            margin-bottom: 20px;
+            font-size: 1.5em;
+            color: #ff5f6d;
+        }
+
+        .gallery-scroll {
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            display: flex;
+            padding: 20px 0;
+            scrollbar-width: none; /* Hide scrollbar for Firefox */
+        }
+
+        .gallery-scroll::-webkit-scrollbar {
+            display: none; /* Hide scrollbar for Chrome, Safari, and Opera */
+        }
+
+        .gallery {
+            display: flex;
+            gap: 10px;
+        }
+
+        .gallery img {
+            width: 200px;
+            height: 200px;
+            border-radius: 10px;
+            scroll-snap-align: start;
+            object-fit: cover;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .contact {
+            background: linear-gradient(to right, #ff5f6d, #ffc371);
+            color: white;
+            padding: 50px 20px;
+            text-align: left;
+        }
+
+        .contact-details {
+            margin-bottom: 30px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .contact-details p {
+            margin: 10px 0;
+            font-size: 1.2em;
+        }
+
+        .contact-details p i {
+            margin-right: 10px;
+            color: #333;
+            background-color: white;
+            border-radius: 50%;
+            padding: 5px;
+            font-size: 1.2em;
+        }
+
+        .map img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            margin-bottom: 20px;
+        }
+
+        .contact-form {
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 15px;
+            margin: 10px 0;
+            border: none;
+            background-color: #f4f4f4;
+            border-radius: 5px;
+            font-size: 1em;
+            box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-form button {
+            padding: 15px 30px;
+            background-color: #ff5f6d;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .contact-form button:hover {
+            background-color: #e14e60;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        @media (max-width: 768px) {
+            .services .service-box {
+                width: 100%;
+            }
+
+            .about img,
+            .about .text {
+                width: 100%;
+                margin: 0;
+            }
+
+            .about .text {
+                margin-top: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2.5em;
+            }
+
+            h2 {
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Nice Jewellers & Nice Beauty Parlour</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="hero">
+        <h1>Style & Beauty Perfected </h1>
+    </div>
+
+    <div class="container">
+        <h2 id="about">About Us</h2>
+        <div class="about">
+            <img src="C:\Users\purut\Downloads\1724431113718_magic_edited.jpg" alt="About Us Image">
+            <div class="text"><center-right>
+               <p>At Nice Jewellers, we pride ourselves on offering a stunning collection of elegant, handcrafted jewelry that caters to every occasion. Whether it's traditional or contemporary designs, we ensure that each piece is crafted with precision and love.</p>
+			   <p>Nice Jewellers in Fatima Nagar stands out not just for its stunning jewellery, but also for its commitment to authenticity and customer satisfaction. The store features a diverse selection of rings, necklaces, earrings, and bangles that cater to every taste and occasion. They are particularly renowned for their intricate bridal collections, which blend traditional charm with modern sophistication. The knowledgeable staff at Nice Jewellers offers expert guidance, helping customers find the perfect piece that aligns with their style and budget. They have built a loyal customer base by consistently delivering quality, trust, and value, making them a go-to destination for all jewellery needs.</p>
+                
+            </div>
+        </div>
+    </div>
+	 <div class="container">
+        <div class="about">
+            <img src="C:\Users\purut\Downloads\Gemini_Generated_Image_8uq9v58uq9v58uq9.jpeg">
+            <div class="text"><center-right>
+               
+                <p>In addition to our jewelry store, we also operate Nice Beauty Parlour, a space where beauty meets relaxation. Our expert stylists and beauticians offer a range of beauty treatments to help you look and feel your best.</p>
+				<p>Nice Beauty Parlour is a well-known beauty destination, offering a wide range of services designed to enhance your natural beauty. Located in a convenient spot, the parlour provides expert treatments including facials, hair styling, makeup, and skin care. The professional and friendly staff are dedicated to making every client feel pampered and refreshed. With a focus on quality products and personalized care, Nice Beauty Parlour ensures that each visit leaves you looking and feeling your best. Whether you're preparing for a special occasion or just in need of some self-care, Nice Beauty Parlour is the perfect place to indulge in a rejuvenating beauty experience.</p>
+			</div>
+        </div>
+    </div>
+    <div class="container">
+        
+        <div class="services">
+              <section id="services" class="container">
+        <h2>Our Services</h2>
+        <div class="services">
+            <div class="service-box">
+                <h3><i class="fas fa-gem"></i> Nice Jewellers</h3>
+                <p>Explore our endless collection of beautiful, custom-designed jewelry to find the perfect piece that reflects your unique style.</p>
+            </div>
+            <div class="service-box">
+                <h3><i class="fas fa-spa"></i> Nice Beauty Parlour</h3>
+                <p>Enjoy professional beauty services that include hair styling, skincare treatments, makeup, and much more.</p>
+            </div>
+        </div>
+    </section>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2>Jewellery Gallery</h2>
+        <div class="gallery-scroll">
+            <div class="gallery">
+                <img src="C:\Users\purut\OneDrive\Pictures\WhatsApp Image 2024-08-08 at 10.42.16_4bf35fbb.jpg" alt="Jewelry 1">
+                <img src="C:\Users\purut\OneDrive\Pictures\WhatsApp Image 2024-08-08 at 10.42.20_e13b427e.jpg" alt="Jewelry 2">
+                <img src="C:\Users\purut\OneDrive\Pictures\WhatsApp Image 2024-08-08 at 10.42.34_0eaaf446.jpg" alt="Jewelry 3">
+                <img src="C:\Users\purut\OneDrive\Pictures\WhatsApp Image 2024-08-08 at 10.42.36_e81c6c1d.jpg" alt="Jewelry 4">
+                <img src="C:\Users\purut\OneDrive\Pictures\WhatsApp Image 2024-08-08 at 10.42.43_d267cf5b.jpg" alt="Jewelry 5">
+                <img src= "C:\Users\purut\OneDrive\Pictures\WhatsApp Image 2024-08-08 at 10.42.45_8b6a47d9.jpg"alt="Jewelry 6">
+                <img src="C:\Users\purut\OneDrive\Pictures\WhatsApp Image 2024-08-08 at 10.42.46_ccb1d68e.jpg" alt="Jewelry 7">
+                <img src="C:\Users\purut\OneDrive\Pictures\WhatsApp Image 2024-08-08 at 10.42.56_3471786c.jpg" alt="Jewelry 8">
+				<img src= "C:\Users\purut\OneDrive\Pictures\WhatsApp Image 2024-08-13 at 16.59.41_ce6024b6.jpg"alt="Jewelry 9">
+                <img src="C:\Users\purut\OneDrive\Pictures\WhatsApp Image 2024-08-13 at 16.59.42_55887d6d.jpg" alt="Jewelry 10">
+                <img src="C:\Users\purut\OneDrive\Pictures\WhatsApp Image 2024-08-13 at 16.59.43_636bf8b1.jpg" alt="Jewelry 11">
+                <img src="C:\Users\purut\OneDrive\Pictures\WhatsApp Image 2024-08-13 at 16.59.43_35ddb088.jpg" alt="Jewelry 12">
+                <img src="C:\Users\purut\OneDrive\Pictures\WhatsApp Image 2024-08-10 at 19.35.42_f2f40a7c.jpg" alt="Jewelry 13">
+                <img src="C:\Users\purut\OneDrive\Pictures\WhatsApp Image 2024-08-10 at 19.35.42_0745dc84.jpg" alt="Jewelry 14">
+                <img src="C:\Users\purut\OneDrive\Pictures\WhatsApp Image 2024-08-10 at 19.35.42_9cb17deb.jpg" alt="Jewelry 15">
+                <img src="C:\Users\purut\OneDrive\Pictures\WhatsApp Image 2024-08-10 at 19.35.43_a00d2df0.jpg" alt="Jewelry 16">
+				<img src="C:\Users\purut\OneDrive\Pictures\WhatsApp Image 2024-08-10 at 19.35.43_8867761e.jpg" alt="Jewelry 17">
+                <img src="C:\Users\purut\OneDrive\Pictures\WhatsApp Image 2024-08-10 at 19.35.44_2408c377.jpg" alt="Jewelry 18">
+                <img src="C:\Users\purut\OneDrive\Pictures\WhatsApp Image 2024-08-10 at 19.35.45_503b6384.jpg" alt="Jewelry 19">
+                <img src="C:\Users\purut\OneDrive\Pictures\WhatsApp Image 2024-08-11 at 17.10.42_2fb90d69.jpg" alt="Jewelry 20">
+                <img src="C:\Users\purut\OneDrive\Pictures\WhatsApp Image 2024-08-11 at 17.10.47_52908609.jpg" alt="Jewelry 21">
+                <img src="C:\Users\purut\OneDrive\Pictures\WhatsApp Image 2024-08-11 at 17.10.48_a6b5a911.jpg" alt="Jewelry 22">
+                <img src="C:\Users\purut\OneDrive\Pictures\WhatsApp Image 2024-08-11 at 17.10.48_7561ae1c.jpg" alt="Jewelry 23">
+                <img src="C:\Users\purut\OneDrive\Pictures\WhatsApp Image 2024-08-11 at 17.10.49_38a847db.jpg" alt="Jewelry 24">
+				<img src="C:\Users\purut\OneDrive\Pictures\WhatsApp Image 2024-08-11 at 17.10.49_9e290846.jpg" alt="Jewelry 25">
+                <img src="C:\Users\purut\OneDrive\Pictures\WhatsApp Image 2024-08-11 at 17.10.50_fdf3b7a4.jpg" alt="Jewelry 26">
+                <img src="C:\Users\purut\OneDrive\Pictures\WhatsApp Image 2024-08-11 at 17.11.24_75dfce0b.jpg" alt="Jewelry 27">
+                <img src="C:\Users\purut\OneDrive\Pictures\WhatsApp Image 2024-08-11 at 17.11.25_08616c1e.jpg" alt="Jewelry 28">
+                <img src="C:\Users\purut\OneDrive\Pictures\WhatsApp Image 2024-08-14 at 15.18.41_320be7ab.jpg" alt="Jewelry 29">
+                <img src="C:\Users\purut\OneDrive\Pictures\WhatsApp Image 2024-08-14 at 15.18.41_96a890e6.jpg" alt="Jewelry 30">
+                <img src="C:\Users\purut\OneDrive\Pictures\WhatsApp Image 2024-08-14 at 15.18.42_79f29ad0.jpg" alt="Jewelry 31">
+                <img src="C:\Users\purut\OneDrive\Pictures\WhatsApp Image 2024-08-14 at 15.18.43_b224852e.jpg" alt="Jewelry 32">
+				<img src="C:\Users\purut\OneDrive\Pictures\WhatsApp Image 2024-08-14 at 15.18.43_6ac95ead.jpg" alt="Jewelry 33">
+                <!-- Add more images as needed -->
+            </div>
+        </div>
+    </div>
+
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <div class="contact-details">
+            <div>
+                <p><i class="fas fa-map-marker-alt"></i> Shop no.4, Parekh Tower, In Diamond Bakery lane, Fatima Nagar, Wanowrie, Pune-411013, Maharastra, INDIA</p>
+                <p><i class="fas fa-phone-alt"></i> +91 9922066232 For Contacting 'Nice Jwellers'</p>
+<p><i class="fas fa-phone-alt"></i> +91 8822066232 For Contacting 'Nice Beauty Parlour'</p>
+                <p><i class="fas fa-envelope"></i> nicepndas@gmail.com</p>
+            </div>
+            <div>
+                <p><strong>Opening Hours:</strong></p>
+                <ul>
+                    <li>Monday to Sunday: 10:30 AM - 9:00 PM</li>
+                    <li>Open All Days</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="map">
+            <h3>Find Us Here:</h3>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15134.631837254694!2d73.90070864756082!3d18.499146140946944!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c10009397e8b%3A0xa50547ec34d3196a!2sNice%20Jewelers!5e0!3m2!1sen!2sin!4v1724490459880!5m2!1sen!2sin" width="900" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+ <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1891.7640783504057!2d73.9022549999619!3d18.505020078351805!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c113672e6bbb%3A0x84322cba7a06f2f1!2sNice%20Beauty%20Parlour!5e0!3m2!1sen!2sin!4v1724506399775!5m2!1sen!2sin" width="900" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+
+           </section>
+
+    <footer>
+        <p>&copy; 2024 Nice Jewellers & Nice Beauty Parlour. All Rights Reserved.</p>
+    </footer>
+
+</body>
+
+</html>
